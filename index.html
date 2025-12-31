@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AM-BLOCK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="stat">
+            <div class="label">СЧЕТ</div>
+            <div id="score" class="val">0</div>
+        </div>
+
+        <div class="pause-btn" id="p-btn">⏸</div>
+
+        <div class="stat">
+            <div class="label">РЕКОРД</div>
+            <div id="best" class="val">0</div>
+        </div>
+    </div>
+
+    <div id="canvas-wrap">
+        <canvas id="game"></canvas>
+
+        <div id="menu" class="overlay">
+            <h1 class="title">BLOCK<span>BLAST</span></h1>
+            <button class="btn" onclick="startGame()">ИГРАТЬ</button>
+        </div>
+
+        <div id="pause-screen" class="overlay" style="display:none">
+            <h2>ПАУЗА</h2>
+            <button class="btn" onclick="togglePause()">ПРОДОЛЖИТЬ</button>
+        </div>
+
+        <div id="game-over" class="overlay" style="display:none">
+            <h2 class="game-over-title">КОНЕЦ</h2>
+            <div id="final-score">0</div>
+            <button class="btn" onclick="location.reload()">ЗАНОВО</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
